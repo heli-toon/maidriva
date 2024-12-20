@@ -1,0 +1,49 @@
+/app
+├── (auth)                      // Group for authentication-related screens
+│   ├── login
+│   │   ├── driver.tsx
+│   │   ├── tourist.tsx
+│   ├── signup
+│   │   ├── driver.tsx
+│   │   ├── tourist.tsx
+│   ├── onboarding.tsx          // Onboarding screen
+│   ├── _layout.tsx             // Layout for authentication flow
+├── (tabs)                      // Group for tab-based navigation
+│   ├── tourist
+│   │   ├── explore.tsx         // Tourist's Home/Explore page
+│   │   ├── map.tsx             // Map view for tourists
+│   │   ├── bookings.tsx        // Bookings tab for tourists
+│   ├── driver
+│   │   ├── dashboard.tsx       // Dashboard for drivers
+│   │   ├── requests.tsx        // Tour Requests for drivers
+│   ├── shared
+│   │   ├── messages.tsx        // Messages tab for both users
+│   │   ├── profile.tsx         // Profile tab for both users
+│   ├── search.tsx              // Search page (shared by both users)
+│   ├── notifications.tsx       // Notifications page (shared by both users)
+│   ├── _layout.tsx             // Layout for tabs
+├── (modals)                    // Group for modal screens
+│   ├── terms.tsx               // Terms & Conditions (Expo WebBrowser)
+│   ├── privacy.tsx             // Privacy Policy (Expo WebBrowser)
+│   ├── help.tsx                // Help (Expo WebBrowser)
+│   ├── eula.tsx                // EULA (Expo WebBrowser)
+│   ├── _layout.tsx             // Layout for modals
+├── components                  // Shared components
+│   ├── AuthProvider.tsx        // Auth context and role management
+│   ├── TabNavigator.tsx        // Tab navigation logic
+│   ├── Colors.ts               // Centralized color constants
+│   ├── CustomButton.tsx        // Example reusable button
+│   ├── CustomInput.tsx         // Example reusable input
+│   ├── SearchBar.tsx           // Search bar component
+│   ├── NotificationItem.tsx    // Notification list item
+├── hooks                       // Custom hooks
+│   ├── useAuth.ts              // Hook for accessing auth state
+│   ├── useNotifications.ts     // Hook for fetching/managing notifications
+├── lib                         // Libraries and configuration
+│   ├── firebaseConfig.ts       // Firebase setup
+│   ├── pushNotifications.ts    // Push notifications setup
+├── utils                       // Utility functions and constants
+│   ├── constants.ts            // App-wide constants
+│   ├── helpers.ts              // Helper functions
+├── _middleware.ts              // Middleware for role-based routing
+├── _layout.tsx                 // Main app layout

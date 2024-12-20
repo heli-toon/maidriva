@@ -51,7 +51,6 @@ export default function OnboardingSlides() {
 
   return (
     <Carousel
-      loop
       width={screenWidth}
       height={400}
       data={slides}
