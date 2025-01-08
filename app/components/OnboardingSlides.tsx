@@ -1,6 +1,8 @@
-import Colors from '@/constants/Colors';
+import { ThemedText } from '@/components/ThemedText';
+import { ThemedView } from '@/components/ThemedView';
+import {Colors} from '@/constants/Colors';
 import React, { useState } from 'react';
-import { View, Text, Image, StyleSheet, Dimensions, Button } from 'react-native';
+import { View, Text, Image, StyleSheet, Dimensions, Button, useColorScheme } from 'react-native';
 import Carousel from 'react-native-reanimated-carousel';
 
 const { width: screenWidth } = Dimensions.get('window');
@@ -27,6 +29,8 @@ const slides = [
 ];
 
 export default function OnboardingSlides() {
+    const colorScheme = useColorScheme();
+  
   const [index, setIndex] = useState(0);  // Keep track of the current slide index
 
   const handleNext = () => {
@@ -39,15 +43,15 @@ export default function OnboardingSlides() {
   };
 
   const renderItem = (item: typeof slides[0], index: number) => (
-    <View style={styles.slide}>
+    <ThemedView style={styles.slide}>
       <Image source={item.image} style={styles.image} />
-      <Text style={styles.title}>{item.title}</Text>
-      <Text style={styles.text}>{item.text}</Text>
+      <ThemedText style={styles.title}>{item.title}</ThemedText>
+      <ThemedText style={styles.text}>{item.text}</ThemedText>
       {/* Show "Get Started" button on the last slide */}
       {index === slides.length - 1 && (
         <Button title="Get Started" onPress={handleNext} />
       )}
-    </View>
+    </ThemedView>
   );
 
   return (
@@ -86,12 +90,12 @@ const styles = StyleSheet.create({
     fontSize: 22,
     fontWeight: 'bold',
     textAlign: 'center',
-    color: Colors.primary,
+    color: Colors.light.tint,
     marginBottom: 10,
   },
   text: {
     fontSize: 16,
     textAlign: 'center',
-    color: Colors.primary,
+    color: Colors.light.tint,
   },
 });

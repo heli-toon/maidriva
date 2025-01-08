@@ -10,8 +10,7 @@
 │   ├── _layout.tsx             // Layout for authentication flow
 ├── (tabs)                      // Group for tab-based navigation
 │   ├── tourist
-│   │   ├── explore.tsx         // Tourist's Home/Explore page
-│   │   ├── map.tsx             // Map view for tourists
+│   │   ├── explore.tsx         // Tourist's Home/Explore page || Map view for tourists
 │   │   ├── bookings.tsx        // Bookings tab for tourists
 │   ├── driver
 │   │   ├── dashboard.tsx       // Dashboard for drivers
@@ -61,3 +60,46 @@ Where do I import the fonts.
 npx expo start -c
 
 
+
+const tintColorLight = '#80C011';
+const tintColorDark = '#6CA20E';
+
+const Colors = {
+  light: {
+    text: '#212121',
+    background: '#FFFFFF',
+    tint: tintColorLight,
+    icon: '#687076',
+    tabIconDefault: '#687076',
+    tabIconSelected: tintColorLight,
+    bg: '#f0fdf4',
+    bg2: '#dcfce7',
+    primary: '#80C011',
+    primary2: '#6CA20E',
+    secondary: '#FFC107',
+    error: '#F44336',
+    success: '#4CAF50',
+    warning: '#FF9800',
+    white: '#FFFFFF',
+  },
+  dark: {
+    text: '#ECEDEE',
+    darkBackground: '#151718',
+    tint: tintColorDark,
+    icon: '#9BA1A6',
+    tabIconDefault: '#9BA1A6',
+    tabIconSelected: tintColorDark,
+    bg: '#1A1F1A',
+    bg2: '#273127',
+    primary: '#6CA20E',
+    primary2: '#55820C',
+    secondary: '#FFB300',
+    error: '#D32F2F',
+    success: '#388E3C',
+    warning: '#F57C00',
+    white: '#FFFFFF',
+  },
+};
+
+
+export default Colors;
