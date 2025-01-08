@@ -47,3 +47,17 @@
 │   ├── helpers.ts              // Helper functions
 ├── _middleware.ts              // Middleware for role-based routing
 ├── _layout.tsx                 // Main app layout
+
+
+
+Issues to ask:
+Where do I import the fonts.
+
+
+
+
+
+
+npx expo start -c
+
+
