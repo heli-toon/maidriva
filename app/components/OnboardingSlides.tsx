@@ -1,3 +1,4 @@
+import Colors from '@/constants/Colors';
 import React, { useState } from 'react';
 import { View, Text, Image, StyleSheet, Dimensions, Button } from 'react-native';
 import Carousel from 'react-native-reanimated-carousel';
@@ -9,19 +10,19 @@ const slides = [
     id: 1,
     title: "Welcome to Our App!",
     text: "Discover amazing features to enhance your experience.",
-    image: require('../assets/images/hero-bg.png'), // Replace with your image
+    image: require('@/assets/images/hero-bg.png'), // Replace with your image
   },
   {
     id: 2,
     title: "Stay Connected",
     text: "Engage with your friends and community seamlessly.",
-    image: require('../assets/images/slide2.jpg'), // Replace with your image
+    image: require('@/assets/images/slide2.jpg'), // Replace with your image
   },
   {
     id: 3,
     title: "Achieve Your Goals",
     text: "Track your progress and accomplish more every day.",
-    image: require('../assets/images/slide3.jpg'), // Replace with your image
+    image: require('@/assets/images/slide3.jpg'), // Replace with your image
   },
 ];
 
@@ -85,12 +86,12 @@ const styles = StyleSheet.create({
     fontSize: 22,
     fontWeight: 'bold',
     textAlign: 'center',
-    color: '#2d3748',
+    color: Colors.primary,
     marginBottom: 10,
   },
   text: {
     fontSize: 16,
     textAlign: 'center',
-    color: '#4a5568',
+    color: Colors.primary,
   },
 });
