@@ -1,26 +1,28 @@
 import React from 'react';
-import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
-import OnboardingSlides from '../components/OnboardingSlides'; // Your carousel component
+import { TouchableOpacity, StyleSheet, useColorScheme } from 'react-native';
+import OnboardingSlides from './components/OnboardingSlides'; // Your carousel component
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useRouter } from 'expo-router';
+import {Colors} from '@/constants/Colors';
+import { ThemedText } from '@/components/ThemedText';
+import { ThemedView } from '@/components/ThemedView';
 
 export default function OnboardingScreen() {
   const router = useRouter();
-
   const completeOnboarding = async () => {
     await AsyncStorage.setItem('hasOnboarded', 'true'); // Mark onboarding as complete
     router.replace('/'); // Navigate to the home screen after onboarding
   };
 
   return (
-    <View style={styles.container}>
+    <ThemedView style={styles.container}>
       <OnboardingSlides />
-      <View style={styles.buttonContainer}>
-        <TouchableOpacity style={styles.button} onPress={completeOnboarding}>
-          <Text style={styles.buttonText}>Get Started</Text>
+      <ThemedView style={styles.buttonContainer}>
+        <TouchableOpacity style={styles.button} activeOpacity={0.6} onPress={completeOnboarding}>
+          <ThemedText style={styles.buttonText} lightColor={Colors.light.text} darkColor={Colors.dark.text}>Get Started</ThemedText>
         </TouchableOpacity>
-      </View>
-    </View>
+      </ThemedView>
+    </ThemedView>
   );
 }
 
@@ -35,7 +37,7 @@ const styles = StyleSheet.create({
     marginTop: 20,
   },
   button: {
-    backgroundColor: '#4CAF50', // Green color
+    backgroundColor: Colors.dark.tint,
     paddingVertical: 12,
     paddingHorizontal: 24,
     borderRadius: 8,
