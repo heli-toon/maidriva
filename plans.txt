@@ -51,15 +51,30 @@
 
 Issues to ask:
 Where do I import the fonts.
+Tiktok is being banned in the US and is banned in the EU so what's our plan now?
 
 
+Fonts
+- Raleway
+- OpenSans <--- I'm not sure about this font, but rn it's the primary font in the app
+
+Pages: 
+- Onboarding Screens / Slides
+- Sign Up > Driver & Tourist
+- Log In > Driver & Tourist
+- Explore: Tourist's Home/Explore page || Map view for tourists.
+- Bookings: Bookings tab for tourists
+- Dashboard: Dashboard for drivers. Insights, etc.
+- Requests: Tour Requests for drivers from tourists
+- Messages: Messages tab for both users
+- Profile: Profile tab for both users
+- Search
+- Notifications
 
 
 
 
 npx expo start -c
-
-
 
 const tintColorLight = '#80C011';
 const tintColorDark = '#6CA20E';

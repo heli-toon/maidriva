@@ -1,8 +1,8 @@
 import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
-import {Colors} from '@/constants/Colors';
+import { Colors } from '@/constants/Colors';
 import React, { useState } from 'react';
-import { View, Text, Image, StyleSheet, Dimensions, Button, useColorScheme } from 'react-native';
+import { Image, StyleSheet, Dimensions, Button, useColorScheme } from 'react-native';
 import Carousel from 'react-native-reanimated-carousel';
 
 const { width: screenWidth } = Dimensions.get('window');

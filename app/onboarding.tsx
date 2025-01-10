@@ -1,9 +1,9 @@
 import React from 'react';
 import { TouchableOpacity, StyleSheet, useColorScheme } from 'react-native';
-import OnboardingSlides from './components/OnboardingSlides'; // Your carousel component
+import OnboardingSlides from '@/components/OnboardingSlides';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useRouter } from 'expo-router';
-import {Colors} from '@/constants/Colors';
+import { Colors } from '@/constants/Colors';
 import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
 

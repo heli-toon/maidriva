@@ -1,6 +1,7 @@
 import React from 'react';
 import { Tabs } from 'expo-router';
 import { Colors } from '@/constants/Colors';
+import { TabBar } from '@/components/TabBar';
 import { Ionicons } from '@expo/vector-icons';
 import { useColorScheme } from 'react-native';
 
@@ -8,7 +9,7 @@ const Layout = () => {
   const colorScheme = useColorScheme();
 
   return (
-    <Tabs
+    <Tabs // tabBar={props => <TabBar {...props} />}
       screenOptions={{
         tabBarActiveTintColor: Colors[colorScheme ?? 'light'].tint,
         headerShown: false,
